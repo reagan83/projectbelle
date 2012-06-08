@@ -11,7 +11,10 @@ namespace ProjectBelle
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Retrieve value of input box - lastname
 
+            // execution of last name search on sql server (code we just saw)
         }
+
     }
 }
