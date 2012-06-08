@@ -6,7 +6,7 @@
     <title>Project Belle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="all" type="text/css" />
-    <script src="javascript/d3.v2.min.js" type="text/javascript"></script>
+    <script src="js/d3.v2.min.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -94,10 +94,7 @@
                                         
                                         <script type="text/javascript">
 
-
-
-
-                                            d3.csv("./data/us-income-inequality.csv", function (data1) {
+                                            d3.csv("./us-income-inequality.csv", function (data1) {
 
                                                 /* Read CSV file: first row =>  year,top1,top5  */
                                                 var maxval = 0,
@@ -238,13 +235,69 @@
        .attr("x", 30 + w / 2)
        .attr("y", 85)
        .text("Top 1% households");
+                                            });
+       </script>
+
+                                               
 
 
-                                            }); 
 
-</script>
+
+
+
+
                                         
                                         </div>
+                                        
+                                        <div id="#chart-10">
+                                        <button>Run</button>
+                                        </div>
+                                        
+<script type="text/javascript">
+
+    (function () {
+        var svg = d3.select("#chart-10").append("svg")
+      .attr("width", w)
+      .attr("height", h);
+
+        var g = svg.selectAll(".data")
+      .data(dataEnter)
+    .enter().append("g")
+      .attr("class", "data")
+      .attr("transform", function (d, i) { return "translate(" + 20 * (i + 1) + ",20)"; });
+
+        g.append("circle")
+      .attr("class", "little")
+      .attr("r", 1e-6);
+
+        g.append("rect")
+      .attr("x", -10)
+      .attr("y", -10)
+      .attr("width", 20)
+      .attr("height", 20)
+      .style("fill", "lightgreen")
+      .style("stroke", "green");
+
+        g.append("text")
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .text(String);
+
+        d3.select("#chart-10 button").on("click", function () {
+            alert("hi!");
+            g.attr("transform", function (d, i) { return "translate(" + 20 * (i + 1) + ",20)"; });
+            g.select("rect").style("opacity", 1);
+            g.select("circle").attr("r", 1e-6);
+
+            var t = g.transition().duration(750);
+            t.attr("transform", function (d, i) { return "translate(" + d + ",90)"; });
+            t.select("circle").attr("r", Math.sqrt);
+            t.select("rect").style("opacity", 1e-6);
+        });
+    })();
+
+
+</script>
 
 
                                     </li>
@@ -340,10 +393,10 @@ rules.append("svg:text")
         </div>
     </div>
 
-    <script src="javascript/less-1.3.0.min.js" type="text/javascript"></script>
-    <script src="javascript/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="javascript/bootstrap.min.js" type="text/javascript"></script>
-    <script src="javascript/bootstrap-tab.js" type="text/javascript"></script>
-    <script src="javascript/bootstrap-button.js" type="text/javascript"></script>
+    <script src="js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-tab.js" type="text/javascript"></script>
+    <script src="js/bootstrap-button.js" type="text/javascript"></script>
 </body>
 </html>

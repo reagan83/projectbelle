@@ -16,5 +16,9 @@ namespace ProjectBelle
             // execution of last name search on sql server (code we just saw)
         }
 
+        private void GetDashboardMetrics()
+        {
+        }
+
     }
 }
