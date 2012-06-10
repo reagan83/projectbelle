@@ -74,7 +74,7 @@ public class dbProcedures
         strMessage = strSubject + "\r\n" + strMessage;
         strSubject = "Database Error (" + applicationName + ")" + " " + strSubject;
 
-        System.Net.Mail.MailAddress systemAddress = new System.Net.Mail.MailAddress(systemEmail, "Trendworks Support");
+        System.Net.Mail.MailAddress systemAddress = new System.Net.Mail.MailAddress(systemEmail, systemEmail);
         System.Net.Mail.MailAddress recepientAddress = new System.Net.Mail.MailAddress(errorEmail);
 
         
