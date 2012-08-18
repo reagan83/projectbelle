@@ -66,7 +66,7 @@ public class dbProcedures
         string errorEmail = System.Configuration.ConfigurationManager.AppSettings.Get("errorEmail");
         string systemEmail = System.Configuration.ConfigurationManager.AppSettings.Get("systemEmail");
 
-        // This should really be encrypted, I know....
+        // This should really be encrypted, and not hard-coded, I know....
         string systemEmailPassword = "opentext123!";
 
         string strResponse = "";

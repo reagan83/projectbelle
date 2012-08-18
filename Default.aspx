@@ -1,402 +1,262 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ProjectBelle._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ProjectBelle.Default" %>
 
 <!DOCTYPE html>
-<html lang="en">
-<head runat="server">
-    <title>Project Belle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="all" type="text/css" />
-    <script src="js/d3.v2.min.js" type="text/javascript"></script>
-</head>
-<body>
-
-    <div class="page-title container-fluid">
-        <div class="pull-left">
-            <h1>Project Belle</h1>
+<html lang='en'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <title>Online BPM Reporting | OpenText Analytics</title>
+    <link href='/css/bootstrap.min.css' media='all' rel='stylesheet' type='text/css' />
+  </head>
+  <body id='home'>
+    <div class='topbar'>
+      <div class='header'>
+        <div class='container'>
+          <a class='brand' href='/' title='Effortless process reporting and insight'>
+            <img alt='OpenText Analytics Logo' src='/img/opentext-site-logo.png' />
+          </a>
+          <h1 class='site-title'>
+            <a href='/' title='Online process reporting and analytics'>
+              OpenText Analytics
+            </a>
+          </h1>
+          <ul class='nav'>
+            <li>
+              <a class='btn disabled' href='/'>
+                Home
+              </a>
+            </li>
+            <li>
+              <a class='' href='#'>
+                Tour
+              </a>
+            </li>
+            <li>
+              <a class='' href='#'>
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a class='' href='#'>
+                Why OpenText Analytics?
+              </a>
+            </li>
+            <li>
+              <a class='' href='#'>
+                About
+              </a>
+            </li>
+            <li>
+              <a class='btn primary' href='#' title='Log in to OpenText Analytics'>
+                Log In
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="pull-right">
-            <img src="img/opentext-site-logo.png" alt="OpenText" />
-        </div>
+      </div>
     </div>
-
-
-    <div class="navbar">
-        <div class="navbar-inner nav-collapse">
-            <div class="container-fluid">
-                <div class="brand">XYZ Financial Services, Inc.</div>
-                <ul class="nav pull-right">
-                    <li class="">
-                        <a href="#">Account Settings</a>
-                    </li>
-                    <li class="divider-vertical"></li>
-                    <li class="">
-                        <a href="#">Logout</a>
-                    </li>
+    <div class='hero ac'>
+      <div class='container'>
+        <h2>Report on your business process with ease.</h2>
+        <div class='big-media'>
+          <img alt='Analytics software platform, and so much more.' height='340' src='/img/opentext-analytics-screenshots.png' width='940' />
+        </div>
+      </div>
+    </div>
+    <div class='container content'>
+      <div class='row'>
+        <div class='span12'>
+          <h1 class='lead'>
+            <strong>Web-based software</strong> that makes it easy to monitor SLAs and KPIs from anywhere.
+          </h1>
+        </div>
+        <div class='span4'>
+          <p class='ac'>
+            <a class='btn huge success' href='#' style='width:80%' title='Register for OpenText Analytics'>
+              <strong>
+                Sign Up for Free
+              </strong>
+            </a>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class='row' id='oanalytics-benefits'>
+        <div class='span8'>
+          <div class='row'>
+            <div class='span1'>
+              <div class='benefit-icon' id='one-place'></div>
+            </div>
+            <div class='span7'>
+              <h3>All process metrics in one place</h3>
+              <p>
+                Eliminate duplicate reporting systems and keep all workflow and case metrics in one safe and secure place &mdash;
+                accessible online anytime, anywhere.
+              </p>
+              <br />
+            </div>
+          </div>
+          <div class='row'>
+            <div class='span1'>
+              <div class='benefit-icon' id='maintenance-tracking'></div>
+            </div>
+            <div class='span7'>
+              <h3>Web-based process tracking</h3>
+              <p>
+                Track processes and workflows in real-time.  Instantly see inventory counts and productivity reports from the same screen.
+              </p>
+              <br />
+            </div>
+          </div>
+          <div class='row'>
+            <div class='span1'>
+              <div class='benefit-icon' id='maintenance-reminders'></div>
+            </div>
+            <div class='span7'>
+              <h3>KPI alerts to your inbox</h3>
+              <p>
+                Reminders automatically email you when KPIs are near or overdue.
+              </p>
+              <br />
+            </div>
+          </div>
+          <div class='row'>
+          </div>
+        </div>
+        <div class='span8'>
+          <div class='row'>
+            <div class='span1'>
+              <div class='benefit-icon' id='operate-efficiently'></div>
+            </div>
+            <div class='span7'>
+              <h3>Improve process efficiency</h3>
+              <p>
+                Maximize throughput on your business-line and spot where resources can be allocated more efficiently.
+              </p>
+              <p>
+                Save time and money by being more organized.
+              </p>
+              <br />
+            </div>
+          </div>
+          <div class='row'>
+           <div class='span1'>
+              <div class='benefit-icon' id='reduce-risk'></div>
+            </div>
+            <div class='span7'>
+              <h3>Worry-free data security</h3>
+              <p>
+                The OpenText Cloud has your company's data securely stored and encrypted.
+              </p>
+              <br />
+            </div>
+          </div>
+          <div class='row'>
+            <div class='span1'>
+              <div class='benefit-icon' id='work-together'></div>
+            </div>
+            <div class='span7'>
+              <h3>Multiple users per company</h3>
+              <p>
+                User-based access lists allow for data to be segmented by roles.
+              </p>
+              <p>
+                Individual user accounts allow for report auditing and secure access.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <blockquote class='big-quote'>
+        <h2>
+          Quote from great customer about OpenText Analytics and how great of a platform it is...
+        </h2>
+        <small>
+          Reagan Williams,
+          <a href='http://www.opentext.com' target='_blank' title='Customer Site'>
+            OpenText #1 Customer
+          </a>
+        </small>
+      </blockquote>
+      <div class='well ac'>
+        <h3>
+          Join the hundreds of companies using OpenText Analytics to manage their business processes.
+          <br />
+          <a href='#' title='Sign up for OpenText Analytics'>
+            Sign up for free
+          </a>
+          &rarr;
+        </h3>
+      </div>
+    </div>
+    <footer>
+      <div class='container'>
+        <div class='row'>
+          <div class='span10'>
+            <div class='row'>
+              <div class='span3'>
+                <h4>Product</h4>
+                <ul class='unstyled'>
+                  <li>
+                    <a href='/'>Home</a>
+                  </li>
+                  <li>
+                    <a href='#'>Why OpenText Analytics?</a>
+                  </li>
+                  <li>
+                    <a href='#'>Feature Tour</a>
+                  </li>
+                  <li>
+                    <a href='#'>Pricing</a>
+                  </li>
+                  <li>
+                    <a href='#'>FAQ</a>
+                  </li>
                 </ul>
+              </div>
+              <div class='span4'>
+                <h4>More</h4>
+                <ul class='unstyled'>
+                  <li>
+                    <a href='#'>Testimonials</a>
+                  </li>
+                  <li>
+                    <a href='#'>ROI Calculator</a>
+                  </li>
+                  <li>
+                    <a href='#'>BPM Management Software</a>
+                  </li>
+                </ul>
+              </div>
+              <div class='span3'>
+                <h4>Company</h4>
+                <ul class='unstyled'>
+                  <li>
+                    <a href='#'>About</a>
+                  </li>
+                  <li>
+                    <a href='#'>Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span2 well">
-              <div class="sidebar-nav">
-                    <ul class="nav nav-list">
-                        <li class="nav-header">
-                            <i class="icon-home"></i>
-                            System Overview
-                        </li>
-                        <li class="active">
-                            <a href="#TabDashboard" data-toggle="tab">
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="nav-header">
-                            <i class="icon-book"></i>
-                            Analytics
-                        </li>
-                        <li><a href="#TabReports" data-toggle="tab">Activity Reports</a></li>
-                        <li><a href="#TabReports" data-toggle="tab">Process Reports</a></li>
-                        <li><a href="#TabReports" data-toggle="tab">Timed Sequence Reports</a></li>
-
-                        <li class="divider"></li>
-                        <li class="nav-header">
-                            <i class="icon-cog"></i>
-                            Configuration
-                        </li>
-                        <li>
-                            <a href="#TabConfiguration" data-toggle="tab">
-                                System Setup
-                            </a>
-                        </li>
-                        <li><a href="#TabConfiguration" data-toggle="tab">Data Connections</a></li>
-                    </ul>
-                    </div>
+      </div>
+      <div id='footer-floor'>
+        <div class='container'>
+          <div class='row'>
+            <div class='span10'>
+              <p>
+                &copy; 2012 OpenText, Inc. All Rights Reserved.
+                &nbsp;<a href='#'>Terms</a>&nbsp;&&nbsp;<a href='#'>Privacy</a>.
+              </p>
             </div>
-            <div class="span10">
-                <div class="tab-content active">
-                    <div class="tab-pane active" id="TabDashboard">
-                        <div class="page-header">
-                            <h1>System Review</h1>
-                        </div>
-
-                        <div class="row-fluid">
-                            <div class="span12">
-                                <ul class="thumbnails">
-                                    <li class="span4">
-                                        <a href="#" class="thumbnail">
-                                            <img src="http://placehold.it/360x268" alt="">
-                                        </a>
-
-
-                                        <div id="paired-line-chart">
-                                        
-                                        <script type="text/javascript">
-
-                                            d3.csv("./us-income-inequality.csv", function (data1) {
-
-                                                /* Read CSV file: first row =>  year,top1,top5  */
-                                                var maxval = 0,
-        sampsize = 0;
-                                                var label_array = new Array(),
-        val_array1 = new Array();
-
-                                                sampsize = data1.length;
-
-                                                for (var i = 0; i < sampsize; i++) {
-                                                    label_array[i] = parseInt(data1[i].year);
-                                                    val_array1[i] = { x: label_array[i], y: parseFloat(data1[i].p99), z: parseFloat(data1[i].p95) };
-                                                    maxval = Math.max(maxval, parseFloat(data1[i].p99), parseFloat(data1[i].p95));
-                                                }
-
-                                                maxval = (1 + Math.floor(maxval / 10)) * 10;
-
-
-                                                var w = 815,
-        h = 500,
-        p = 30,
-        x = d3.scale.linear().domain([label_array[0], label_array[sampsize - 1]]).range([0, w]),
-        y = d3.scale.linear().domain([0, maxval]).range([h, 0]);
-
-                                                var vis = d3.select("#paired-line-chart")
-       .data([val_array1])
-     .append("svg:svg")
-       .attr("width", w + p * 2)
-       .attr("height", h + p * 2)
-     .append("svg:g")
-       .attr("transform", "translate(" + p + "," + p + ")");
-
-
-                                                var rules = vis.selectAll("g.rule")
-      .data(x.ticks(15))
-     .enter().append("svg:g")
-       .attr("class", "rule");
-
-                                                // Draw grid lines
-                                                rules.append("svg:line")
-    .attr("x1", x)
-    .attr("x2", x)
-    .attr("y1", 0)
-    .attr("y2", h - 1);
-
-                                                rules.append("svg:line")
-    .attr("class", function (d) { return d ? null : "axis"; })
-    .data(y.ticks(10))
-    .attr("y1", y)
-    .attr("y2", y)
-    .attr("x1", 0)
-    .attr("x2", w - 10);
-
-                                                // Place axis tick labels
-                                                rules.append("svg:text")
-    .attr("x", x)
-    .attr("y", h + 15)
-    .attr("dy", ".71em")
-    .attr("text-anchor", "middle")
-    .text(x.tickFormat(10))
-    .text(String);
-
-                                                rules.append("svg:text")
-    .data(y.ticks(12))
-    .attr("y", y)
-    .attr("x", -10)
-    .attr("dy", ".35em")
-    .attr("text-anchor", "end")
-    .text(y.tickFormat(5));
-
-
-                                                // Series I
-                                                vis.append("svg:path")
-       .attr("class", "line")
-       .attr("fill", "none")
-       .attr("stroke", "maroon")
-       .attr("stroke-width", 2)
-       .attr("d", d3.svg.line()
-         .x(function (d) { return x(d.x); })
-         .y(function (d) { return y(d.y); }));
-
-                                                vis.selectAll("circle.line")
-       .data(val_array1)
-     .enter().append("svg:circle")
-       .attr("class", "line")
-       .attr("fill", "maroon")
-       .attr("cx", function (d) { return x(d.x); })
-       .attr("cy", function (d) { return y(d.y); })
-       .attr("r", 1);
-
-                                                // Series II
-                                                vis.append("svg:path")
-       .attr("class", "line")
-       .attr("fill", "none")
-       .attr("stroke", "darkblue")
-       .attr("stroke-width", 2)
-       .attr("d", d3.svg.line()
-         .x(function (d) { return x(d.x); })
-         .y(function (d) { return y(d.z); }));
-
-                                                vis.select("circle.line")
-       .data(val_array1)
-     .enter().append("svg:circle")
-       .attr("class", "line")
-       .attr("fill", "darkblue")
-       .attr("cx", function (d) { return x(d.x); })
-       .attr("cy", function (d) { return y(d.z); })
-       .attr("r", 1);
-
-                                                // -----------------------------
-                                                // Add Title then Legend
-                                                // -----------------------------
-                                                vis.append("svg:text")
-       .attr("x", w / 4)
-       .attr("y", 20)
-       .text("% share of income (excluding capital gains): U.S. 1920-2008");
-
-                                                vis.append("svg:rect")
-       .attr("x", w / 2 - 20)
-       .attr("y", 50)
-       .attr("stroke", "darkblue")
-       .attr("height", 2)
-       .attr("width", 40);
-
-                                                vis.append("svg:text")
-       .attr("x", 30 + w / 2)
-       .attr("y", 55)
-       .text("Top 5% households");
-
-                                                vis.append("svg:rect")
-       .attr("x", w / 2 - 20)
-       .attr("y", 80)
-       .attr("stroke", "maroon")
-       .attr("height", 2)
-       .attr("width", 40);
-
-                                                vis.append("svg:text")
-       .attr("x", 30 + w / 2)
-       .attr("y", 85)
-       .text("Top 1% households");
-                                            });
-       </script>
-
-                                               
-
-
-
-
-
-
-
-                                        
-                                        </div>
-                                        
-                                        <div id="#chart-10">
-                                        <button>Run</button>
-                                        </div>
-                                        
-<script type="text/javascript">
-
-    (function () {
-        var svg = d3.select("#chart-10").append("svg")
-      .attr("width", w)
-      .attr("height", h);
-
-        var g = svg.selectAll(".data")
-      .data(dataEnter)
-    .enter().append("g")
-      .attr("class", "data")
-      .attr("transform", function (d, i) { return "translate(" + 20 * (i + 1) + ",20)"; });
-
-        g.append("circle")
-      .attr("class", "little")
-      .attr("r", 1e-6);
-
-        g.append("rect")
-      .attr("x", -10)
-      .attr("y", -10)
-      .attr("width", 20)
-      .attr("height", 20)
-      .style("fill", "lightgreen")
-      .style("stroke", "green");
-
-        g.append("text")
-      .attr("dy", ".35em")
-      .attr("text-anchor", "middle")
-      .text(String);
-
-        d3.select("#chart-10 button").on("click", function () {
-            alert("hi!");
-            g.attr("transform", function (d, i) { return "translate(" + 20 * (i + 1) + ",20)"; });
-            g.select("rect").style("opacity", 1);
-            g.select("circle").attr("r", 1e-6);
-
-            var t = g.transition().duration(750);
-            t.attr("transform", function (d, i) { return "translate(" + d + ",90)"; });
-            t.select("circle").attr("r", Math.sqrt);
-            t.select("rect").style("opacity", 1e-6);
-        });
-    })();
-
-
-</script>
-
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="tab-pane" id="TabReports">
-                        <div class="page-header">
-                            <h1>Reports Page</h1>
-                            <div id="paired-bar-chart">
-                            <script type="text/javascript">
-<!-- Data for bar chart: Two time-series, alternating to form a single series. Bar Color will switch back & forth -->
-//var data = d3.range(10).map(Math.random);
-var data = [23, 85, 67, 38, 70, 30, 80, 18 ];
-var colorlist = ["maroon", "darkblue"];
-var labellist = ["Reagan (1982/84/87)", "", "Bush I (1990)", "", "Clinton (1993/1997)", "", "Obama (proposed, 2011)", ""];
-
-var w = 815,
-    h = 260,
-    labelpad = 165,
-    x = d3.scale.linear().domain([0, 100]).range([0, w]),
-    y = d3.scale.ordinal().domain(d3.range(data.length)).rangeBands([0, h], .2);
-
-var vis = d3.select("#paired-bar-chart")
-  .append("svg:svg")
-    .attr("width", w + 40)
-    .attr("height", h + 20)
-  .append("svg:g")
-    .attr("transform", "translate(20,0)");
-
-var bars = vis.selectAll("g.bar")
-    .data(data)
-  .enter().append("svg:g")
-    .attr("class", "bar")
-    .attr("transform", function(d, i) { return "translate(" + labelpad + "," + y(i) + ")"; });
-
-bars.append("svg:rect")
-    .attr("fill", function(d, i) { return colorlist[i % 2]; } )   //Alternate colors
-    .attr("width", x)
-    .attr("height", y.rangeBand());
-
-bars.append("svg:text")
-    .attr("x", 0)
-    .attr("y", 10 + y.rangeBand() / 2)
-    .attr("dx", -6)
-    .attr("dy", ".35em")
-    .attr("text-anchor", "end")
-    .text(function(d, i) { return labellist[i]; });
-
-
-var rules = vis.selectAll("g.rule")
-    .data(x.ticks(10))
-  .enter().append("svg:g")
-    .attr("class", "rule")
-    .attr("transform", function(d) { return "translate(" + x(d) + ", 0)"; });
-
-rules.append("svg:line")
-    .attr("y1", h)
-    .attr("y2", h + 6)
-    .attr("x1", labelpad)
-    .attr("x2", labelpad)
-    .attr("stroke", "black");
-
-rules.append("svg:line")
-    .attr("y1", 0)
-    .attr("y2", h)
-    .attr("x1", labelpad)
-    .attr("x2", labelpad)
-    .attr("stroke", "white")
-    .attr("stroke-opacity", .3);
-
-
-rules.append("svg:text")
-    .attr("y", h + 8)
-    .attr("x", labelpad)
-    .attr("dy", ".71em")
-    .attr("text-anchor", "middle")
-    .text(x.tickFormat(10));
-
-</script>
-</div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="TabConfiguration">
-                        <div class="page-header">
-                            <h1>Configuration Page</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-
-    <script src="js/less-1.3.0.min.js" type="text/javascript"></script>
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap-tab.js" type="text/javascript"></script>
-    <script src="js/bootstrap-button.js" type="text/javascript"></script>
-</body>
+      </div>
+    </footer>
+    <script src='/js/jquery-1.7.2.min.js'></script>
+    <script src='/js/bootstrap.min.js'></script>
+  </body>
 </html>

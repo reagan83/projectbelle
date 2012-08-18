@@ -10,6 +10,6 @@
 namespace ProjectBelle {
     
     
-    public partial class Default {
+    public partial class _Default {
     }
 }
