@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="ftp://ftp.bpmreports.com/www.bpmreports.com/web/content" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="False" userName="opentext" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOiNTLL0R90GqWbM4r5iWiQAAAAACAAAAAAADZgAAwAAAABAAAAC/rks1qHBGzfihCHsgQfFaAAAAAASAAACgAAAAEAAAAOrrwWY/lKdcM5FBTKOBkaIYAAAAGDLoWd1f/Bf7SLW5micpntrdz6lhyFGJFAAAAJRAg7sORJtE1N40WLCDwFqagY+S" SelectedForPublish="True">
-    <file relUrl="Web.config" publishTime="08/16/2012 15:45:52" />
+    <file relUrl="css/bootstrap.min.old.css" publishTime="06/07/2012 11:54:47" />
     <file relUrl="css/bootstrap.min.css" publishTime="08/16/2012 15:28:31" />
     <file relUrl="js/bootstrap.min.js" publishTime="06/06/2012 15:25:24" />
     <file relUrl="img/opentext-site-logo-orig.png" publishTime="08/16/2012 12:04:42" />
@@ -9,20 +9,20 @@
     <file relUrl="img/lv4_opentext.png" publishTime="08/16/2012 12:02:50" />
     <file relUrl="img/lv4_header.png" publishTime="06/06/2012 22:21:47" />
     <file relUrl="img/big-quote-bg.png" publishTime="08/16/2012 15:11:52" />
-    <file relUrl="css/bootstrap.min.old.css" publishTime="06/07/2012 11:54:47" />
     <file relUrl="img/glyphicons-halflings-white.png" publishTime="06/06/2012 15:58:49" />
+    <file relUrl="Web.config" publishTime="08/16/2012 15:45:52" />
     <file relUrl="bin/ProjectBelle.dll" publishTime="08/17/2012 08:34:20" />
     <file relUrl="css/opentext.css" publishTime="08/16/2012 12:02:14" />
     <file relUrl="js/jquery-1.7.2.min.js" publishTime="06/06/2012 15:25:24" />
-    <file relUrl="js/bootstrap-tab.js" publishTime="06/06/2012 15:25:24" />
     <file relUrl="img/glyphicons-halflings.png" publishTime="06/06/2012 15:58:49" />
     <file relUrl="img/home-icons-sprite.png" publishTime="08/16/2012 15:25:41" />
     <file relUrl="img/opentext-analytics-screenshots.png" publishTime="08/16/2012 15:06:18" />
     <file relUrl="bin/ProjectBelle.pdb" publishTime="08/17/2012 08:34:20" />
     <file relUrl="js/bootstrap-button.js" publishTime="06/06/2012 15:25:24" />
-    <file relUrl="Default.aspx" publishTime="08/17/2012 11:48:40" />
+    <file relUrl="img/opentext-site-logo.png" publishTime="08/17/2012 08:34:17" />
+    <file relUrl="Default.aspx" publishTime="08/20/2012 10:05:15" />
     <file relUrl="js/less-1.3.0.min.js" publishTime="06/06/2012 15:25:24" />
     <file relUrl="js/d3.v2.min.js" publishTime="06/06/2012 22:54:09" />
-    <file relUrl="img/opentext-site-logo.png" publishTime="08/17/2012 08:34:17" />
+    <file relUrl="js/bootstrap-tab.js" publishTime="06/06/2012 15:25:24" />
   </publishProfile>
 </publishData>
