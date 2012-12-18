@@ -46,7 +46,8 @@ public class dbProcedures
 {
     public db sql;
 
-    string LogFile = System.Configuration.ConfigurationManager.AppSettings.Get("LogFile");
+
+    string LogFile = @"\\fs1-n02\stor2wc1dfw1\373268\716938\www.bpmreports.com\web\content\" + System.Configuration.ConfigurationManager.AppSettings.Get("LogFile");
 
     public dbProcedures()
     {
@@ -72,7 +73,7 @@ public class dbProcedures
         string strResponse = "";
 
         strMessage = strSubject + "\r\n" + strMessage;
-        strSubject = "Database Error (" + applicationName + ")" + " " + strSubject;
+        strSubject = "BPMReports Error (" + applicationName + ")" + " " + strSubject;
 
         System.Net.Mail.MailAddress systemAddress = new System.Net.Mail.MailAddress(systemEmail, systemEmail);
         System.Net.Mail.MailAddress recepientAddress = new System.Net.Mail.MailAddress(errorEmail);
@@ -111,6 +112,122 @@ public class dbProcedures
 
         return strResponse;
     }
+
+    public string CreateSession(string strEmail, string strIPAddress)
+    {
+        System.Data.SqlClient.SqlDataReader reader = null;
+        string strSessionKey = "";
+
+        try
+        {
+            System.Data.SqlClient.SqlCommand sqlCommand;
+
+            sqlCommand = new System.Data.SqlClient.SqlCommand();
+            sqlCommand.Connection = sql.SqlConnection;
+
+            sqlCommand.CommandText = "[usp_CreateSession]";
+
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@Email", strEmail));
+            sqlCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@IPAddress", strIPAddress));
+
+            reader = sqlCommand.ExecuteReader();
+
+            if (reader.Read())
+            {
+                if ((!object.ReferenceEquals(reader[0], System.DBNull.Value)))
+                {
+                    strSessionKey = reader[0].ToString();
+                }
+            }
+
+            reader.Close();
+        }
+        catch (Exception ex)
+        {
+            dbError(ex.StackTrace, ex.Message);
+        }
+
+        return strSessionKey;
+    }
+
+
+    public string GetAccountHash(string strEmail)
+    {
+        System.Data.SqlClient.SqlDataReader reader = null;
+        string strHash = "";
+
+        try
+        {
+            System.Data.SqlClient.SqlCommand sqlCommand;
+
+            sqlCommand = new System.Data.SqlClient.SqlCommand();
+            sqlCommand.Connection = sql.SqlConnection;
+
+            sqlCommand.CommandText = "[usp_GetAccountHash]";
+
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@email", strEmail));
+
+            reader = sqlCommand.ExecuteReader();
+
+            if (reader.Read())
+            {
+                if ((!object.ReferenceEquals(reader[0], System.DBNull.Value)))
+                {
+                    strHash = reader[0].ToString();
+                }
+            }
+
+            reader.Close();
+        }
+        catch (Exception ex)
+        {
+            dbError(ex.StackTrace, ex.Message);
+        }
+
+        return strHash;
+    }
+
+
+    public bool ValidateSessionKey(string strSessionKey, string strIPAddress)
+    {
+        System.Data.SqlClient.SqlDataReader reader = null;
+        bool validSession = false;
+
+        try
+        {
+            System.Data.SqlClient.SqlCommand sqlCommand;
+
+            sqlCommand = new System.Data.SqlClient.SqlCommand();
+            sqlCommand.Connection = sql.SqlConnection;
+
+            sqlCommand.CommandText = "[usp_ValidateSession]";
+
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@SessionKey", strSessionKey));
+            sqlCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@IPAddress", strIPAddress));
+
+            reader = sqlCommand.ExecuteReader();
+
+            if (reader.Read())
+            {
+                if ((!object.ReferenceEquals(reader[0], System.DBNull.Value)))
+                {
+                    validSession = true;
+                }
+            }
+
+            reader.Close();
+        }
+        catch (Exception ex)
+        {
+            dbError(ex.StackTrace, ex.Message);
+        }
+
+        return validSession;
+    }
+
 
 
     public bool AddNewEOB(string strUsername, string strSourceId, string strFilename)

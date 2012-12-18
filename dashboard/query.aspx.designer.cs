@@ -10,6 +10,6 @@
 namespace ProjectBelle {
     
     
-    public partial class _Default {
+    public partial class _query {
     }
 }

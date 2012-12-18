@@ -6,6 +6,9 @@
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
     <title>Online BPM Reporting | OpenText Analytics</title>
     <link href='/css/bootstrap.min.css' media='all' rel='stylesheet' type='text/css' />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" type="text/css">
+
+
   </head>
   <body id='home'>
     <div class='topbar'>
@@ -46,7 +49,7 @@
               </a>
             </li>
             <li>
-              <a class='btn primary' href='#' title='Log in to OpenText Analytics'>
+              <a class='btn primary' href='/Login.aspx' title='Log in to OpenText Analytics'>
                 Log In
               </a>
             </li>
